@@ -36,7 +36,6 @@ const routes: Routes = [
     canActivate: [ RecyclerGuard ],
     children: [
       { path: '', component: RecyclerComponent },
-      { path: 'viewProduct', component: ViewProductComponent },
       { path: 'addProductRecycle', component: EwasteSortingComponent },
       { path: 'viewSorted', component: ViewSortedComponent }
     ]

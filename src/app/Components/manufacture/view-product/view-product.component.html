@@ -5,7 +5,7 @@
         <div class="page-content">
           <div class="form-v9-content">
             <form class="form-detail">
-              <h2>Buy List</h2>
+              <h2>View Products</h2>
               <div class="container-fluids">
                 <table class="table">
                   <thead>
@@ -13,16 +13,19 @@
                       <th>Product Id</th>
                       <th>Product Name</th>
                       <th>Category</th>
+                      <th>Description</th>
                       <th>Price</th>
+                      <!-- <th></th> -->
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Bottle</td>
-                      <td>Family Plastics</td>
-                      <td>1001</td>
-                      <td><button>Buy</button></td>
+                    <tr *ngFor="let p of product">
+                      <td>{{p.productId}}</td>
+                      <td>{{p.productName}}</td>
+                      <td>{{p.category}}</td>
+                      <td>{{p.description}}</td>
+                      <td>{{p.price}} ETH</td>
+                      <!-- <td></td> -->
                     </tr>
                   </tbody>
                 </table>

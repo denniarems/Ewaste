@@ -28,6 +28,7 @@ export class RecyclerGuard implements CanActivate {
     if ( user.accountType === '2' ) {
       localStorage.clear()
       localStorage.setItem( 'userData', JSON.stringify( user ) )
+      localStorage.setItem( 'userId', userID )
       return true
     } else {
       alert( 'Sorry !!! You are Not a User' )

@@ -64,6 +64,7 @@ function CreateProduct (string calldata _name,string calldata _category,string c
 } 
 function SortRecycler(uint _P_ID) public onlyRec() recycler(_P_ID)  {
   Product[_P_ID].recyclerID = UserID[msg.sender];
+  Product[_P_ID].price = div(Product[_P_ID].price,3);
   Product[_P_ID].status = false;
 }
 function BuyProduct(uint _P_ID) public payable onlyMan() buyProduct(_P_ID){
@@ -71,5 +72,13 @@ function BuyProduct(uint _P_ID) public payable onlyMan() buyProduct(_P_ID){
   User[Product[_P_ID].recyclerID].userAddress.transfer(Product[_P_ID].price);
   Product[_P_ID].recyclerID = 0;
   Product[_P_ID].status = true;
+}
+
+function div(uint256 a, uint256 b) internal pure returns (uint256) {
+  // Solidity only automatically asserts when dividing by 0
+  require(b > 0, "division by zero");
+  uint256 c = a / b;
+  // assert(a == b * c + a % b); // There is no case in which this doesn't hold
+  return c;
 }
 }
