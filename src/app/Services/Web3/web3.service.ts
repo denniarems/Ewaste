@@ -29,7 +29,7 @@ export class Web3Service {
   private RefreshedAccount = interval( 1000 )
   public AccountSubscription: Subscription
   public async web3login() {
-    EWASTEJSON = require( '../../../../contracts/Ewaste.json' )
+    EWASTEJSON = require( '../../../../build/contracts/Ewaste.json' )
     return new Promise( async ( resolve, reject ) => {
       // check dapp browser
       if ( window.ethereum || window.web3 ) {
