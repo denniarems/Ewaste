@@ -1,0 +1,54 @@
+<form class="limiter">
+  <form class="container-login100">
+    <form class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="/assets/img-01.png" alt="IMG">
+      </div>
+      <form class="formwidth" (ngSubmit)="addProduct(myForm)" #myForm="ngForm">
+        <div class="login100-form validate-form">
+          <span class="login100-form-title">
+            Add Product
+          </span>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text" ngModel name="productName" placeholder="Product Name">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text" ngModel name="category" placeholder="Product Category">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="text" ngModel name="description" placeholder="Product Description">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input">
+            <input class="input100" type="number" ngModel name="price" placeholder="Product Price in ETH">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Add Product
+            </button>
+          </div>
+        </div>
+      </form>
+
+
+    </form>
+  </form>
+</form>

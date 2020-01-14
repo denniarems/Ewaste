@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="addlist">Add List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="viewlist">View List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="aggregator">Aggregator</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="recycler">Recycler</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logOut()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<ng-content></ng-content>

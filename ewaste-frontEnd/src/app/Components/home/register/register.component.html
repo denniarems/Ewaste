@@ -1,0 +1,58 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-pic js-tilt" data-tilt>
+        <img src="assets/img-01.png" alt="IMG">
+      </div>
+      <form class="formwidth" (ngSubmit)="register(myForm)" #myForm="ngForm">
+        <div class="login100-form validate-form">
+          <span class="login100-form-title">
+            Registration
+          </span>
+          <div class="wrap-input100 validate-input" data-validate="Valid user name is required: ex@abc.xyz">
+            <input class="input100" type="text" ngModel name="userName" placeholder="Username">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Address is required">
+            <input class="input100" type="text" ngModel name="contactAddress" placeholder="Contact Address">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="wrap-input100 validate-input" data-validate="Account Type is required">
+            <input class="input100" type="number" ngModel name="accountType" placeholder="Account Type">
+            <span class="focus-input100"></span>
+            <span class="symbol-input100">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="container-login100-form-btn">
+            <button class="login100-form-btn">
+              Signup
+            </button>
+          </div>
+          <!-- <div *ngIf="showMsg">
+            <div class="col-xs-12">
+              <br>
+              <p class="alert alert-success">
+                <strong>Registration Success!</strong><br><span (click)="redirect()"> Please click here to
+                  login!.</span>
+              </p>
+            </div>
+          </div> -->
+          <div class="text-center p-t-12">
+            <a class="txt2" routerLink="/">
+              Already have one, click here to signin
+              <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
