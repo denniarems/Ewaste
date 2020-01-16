@@ -15,6 +15,7 @@ export class EwasteSortingComponent implements OnInit {
   ew: any
   account: any
   product: ProductModel[] = []
+  totalProducts: number
   constructor ( private route: Router, private web3service: Web3Service ) {
   }
   ngOnInit() {
@@ -26,8 +27,8 @@ export class EwasteSortingComponent implements OnInit {
   }
   onLoad = async () => {
     try {
-      const totalProducts = await this.ew.P_ID().call( { from: this.account } ) - 1
-      for ( let index = 1;index <= totalProducts;index++ ) {
+      this.totalProducts = await this.ew.P_ID().call( { from: this.account } ) - 1
+      for ( let index = 1;index <= this.totalProducts;index++ ) {
         const p = await this.ew.Product( index ).call( { from: this.account } )
         if ( p.recyclerID === '0' && p.status ) {
           this.product.push( {
@@ -55,9 +56,9 @@ export class EwasteSortingComponent implements OnInit {
       } )
       console.log( 'Log: EwasteSortingComponent -> recycle -> sort', sort )
       if ( sort.status ) {
-        // delete this.product
+        // delete this.product[index]
+        this.totalProducts = null
         alert( 'Product Added to Recycle SuccessFully' )
-        await this.onLoad()
       }
     } catch ( error ) {
       console.log( 'Log: EwasteSortingComponent -> recycle -> error', error )
