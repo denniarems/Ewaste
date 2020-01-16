@@ -9,8 +9,8 @@ import { Router } from '@angular/router'
 } )
 export class NavigationComponent implements OnInit {
 
+  ContentType: number
   constructor ( private web3service: Web3Service, private route: Router ) { }
-
   ngOnInit() {
   }
   logOut = async () => {

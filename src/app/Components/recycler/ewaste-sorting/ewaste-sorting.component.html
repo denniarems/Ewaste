@@ -4,41 +4,46 @@
       <div class="form-v9">
         <div class="page-content">
           <div class="form-v9-content">
-            <form class="form-detail">
-              <h2>Add Products to Recycle</h2>
-              <div class="container-fluids">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Product Id</th>
-                      <th>Product Name</th>
-                      <th>Category</th>
-                      <th>Description</th>
-                      <th>Original Price</th>
-                      <th>Recycle Price</th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let p of product">
-                      <td>{{p.productId}}</td>
-                      <td>{{p.productName}}</td>
-                      <td>{{p.category}}</td>
-                      <td>{{p.description}}</td>
-                      <td>{{p.price}} ETH</td>
-                      <td>{{p.price / 3}} ETH</td>
-                      <td>
-                        <div class="login50-form-btn">
-                          <button (click)="recycle(p.productId)" class="login50-form-btn">
-                            Recycle
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </form>
+
+            <h2>Add Products to Recycle</h2>
+            <div class="container-fluids">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Product Id</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Original Price</th>
+                    <th>Recycle Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of product">
+                    <td>{{p.productId}}</td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.category}}</td>
+                    <td>{{p.description}}</td>
+                    <td>{{p.price}} ETH</td>
+                    <td>{{p.price / 3}} ETH</td>
+                    <td>
+                      <div class="login50-form-btn">
+                        <button (click)="recycle(p.productId)" class="login50-form-btn">
+                          Recycle
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="container-login100-form-btn">
+              <button routerLink="/recycler" class="login100-form-btn">
+                Back
+              </button>
+            </div>
+
           </div>
         </div>
 

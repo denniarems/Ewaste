@@ -57,7 +57,7 @@ export class EwasteSortingComponent implements OnInit {
       console.log( 'Log: EwasteSortingComponent -> recycle -> sort', sort )
       if ( sort.status ) {
         // delete this.product[index]
-        this.totalProducts = null
+        this.product = null
         alert( 'Product Added to Recycle SuccessFully' )
       }
     } catch ( error ) {
